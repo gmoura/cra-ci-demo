@@ -9,7 +9,8 @@
     "gh-pages": "^3.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "snyk": "^1.346.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -20,7 +21,9 @@
     "size": "yarn build && size-limit",
     "cypress:run": "cypress run --record --key 43be9c44-8f13-4520-84e8-9f97e5dba6cc --browser chrome",
     "ci:cypress-run": "start-server-and-test start http://localhost:3000 cypress:run",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "projectId": "9ziirg",
   "eslintConfig": {
@@ -49,5 +52,6 @@
     "cypress": "^4.8.0",
     "size-limit": "^4.5.0",
     "start-server-and-test": "^1.11.0"
-  }
+  },
+  "snyk": true
 }
